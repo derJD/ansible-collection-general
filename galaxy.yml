@@ -2,7 +2,7 @@
 
 namespace: derjd
 name: general
-version: 1.0.0
+version: 1.0.1
 readme: README.md
 authors:
   - Jean-Denis Gebhardt <projects@der-jd.de>
