@@ -15,7 +15,7 @@ DOCUMENTATION = '''
     name: http
     plugin_type: inventory
     author:
-      - Jean-Denis Gebhardt <projects@der-jd.de> (@derJD)
+      - Jean-Denis Gebhardt <projects@der-jd.de> (@derjd)
     short_description: HTTP(s) inventory source.
     requirements:
       - python >= 3
@@ -38,7 +38,7 @@ DOCUMENTATION = '''
             required: true
             choices:
               - http
-              - derJD.general.http
+              - derjd.general.http
         url:
             description: The URL with protocol (i.e. http or https).
             env:
@@ -74,7 +74,7 @@ DOCUMENTATION = '''
 
 EXAMPLES = '''
 # http_inventory.yml
-plugin: derJD.geleral.http
+plugin: derjd.geleral.http
 url: https://example.gitlab.io/example_page/inventory.json
 '''
 
@@ -82,7 +82,7 @@ url: https://example.gitlab.io/example_page/inventory.json
 class InventoryModule(BaseInventoryPlugin, Constructable):
     ''' Host inventory parser for ansible using HTTP(s) as source. '''
 
-    NAME = 'derJD.general.http'
+    NAME = 'derjd.general.http'
 
     def __init__(self):
         super(InventoryModule, self).__init__()

@@ -2,6 +2,7 @@
 # GNU General Public License v3.0+
 # (see COPYING or https://www.gnu.org/licenses/gpl-3.0.txt)
 
+
 def dict2ini(data, quote=True):
     '''
     Convert a nested dict into a list, easily parsable by loops
@@ -19,7 +20,7 @@ def dict2ini(data, quote=True):
                 ima_3_option: ima_3_value
                 ima_4_option: ima_4_value
 
-        "{{ ini_vars | derJD.general.dict2ini }}"
+        "{{ ini_vars | derjd.general.dict2ini }}"
         Would be converted into this structure:
 
         - section: ima_1_section
@@ -44,7 +45,7 @@ def dict2ini(data, quote=True):
                 section: "{{ item.section }}"
                 option: "{{ item.option }}"
                 value: "{{ item.value }}"
-              loop: "{{ ini_vars | derJD.general.dict2ini }}"
+              loop: "{{ ini_vars | derjd.general.dict2ini }}"
     '''
 
     ret = []

@@ -1,8 +1,8 @@
-# Ansible Collection - derJD.general
+# Ansible Collection - derjd.general
 
 [![Galaxy](https://img.shields.io/static/v1??style=flat&logo=ansible&message=derJD.general&color=blue)](https://galaxy.ansible.com/derJD/general)
 
-This repo contains the `derJD.general` collection. You'll find several plugins in this collection
+This repo contains the `derjd.general` collection. You'll find several plugins in this collection
 that aren't part of the [community.general collection](https://github.com/ansible-collections/community.general)
 and aren't part of more specialized collections as well.
 
@@ -18,14 +18,14 @@ and aren't part of more specialized collections as well.
 You can use this collection simply by installing it with `ansible-galaxy`:
 
 ```bash
-ansible-galaxy collection install derJD.general
+ansible-galaxy collection install derjd.general
 ```
 
 If you are using requirement.yml files for downloading collections and roles, add these lines:
 
 ```yaml
 collections:
-  - derJD.general
+  - derjd.general
 ```
 
 ## Usage
@@ -58,7 +58,7 @@ that are easily parsable by ansible loops.
         section: "{{ item.section }}"
         option: "{{ item.option }}"
         value: "{{ item.value }}"
-      loop: "{{ ini_vars | derJD.general.dict2ini }}"
+      loop: "{{ ini_vars | derjd.general.dict2ini }}"
 ```
 
 ### Inventory
@@ -75,7 +75,7 @@ Inventory hosted on a plain webserver without authentication.
 `web.html_inventory.yml`:
 
 ```yaml
-plugin: derJD.general.http
+plugin: derjd.general.http
 url: https://example.io/example_inventories/dev/inventory.json
 ```
 
@@ -93,7 +93,7 @@ Inventory hosted on gitlab pages and authentication enabled.
 `gitlab_pages.html_inventory.yml`:
 
 ```yaml
-plugin: derJD.general.http
+plugin: derjd.general.http
 url: https://example.gitlab.io/example_inventories/dev/inventory.json
 auth_method: gitlab
 ```
