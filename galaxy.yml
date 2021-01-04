@@ -1,0 +1,16 @@
+---
+
+namespace: derJD
+name: general
+version: 1.0.0
+readme: README.md
+authors:
+  - Jean-Denis Gebhardt <projects@der-jd.de>
+description: This collection contains plugins
+license:
+  - GPL-3.0-or-later
+tags:
+  - inventory
+  - filter
+repository: https://github.com/derJD/ansible-collection-general
+issues: https://github.com/derJD/ansible-collection-general/issues
