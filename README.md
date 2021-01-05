@@ -1,6 +1,6 @@
 # Ansible Collection - derjd.general
 
-[![Galaxy](https://img.shields.io/static/v1??style=flat&logo=ansible&message=derJD.general&color=blue)](https://galaxy.ansible.com/derJD/general)
+[![Galaxy](https://img.shields.io/static/v1??style=flat&logo=ansible&label=galaxy&message=derJD.general&color=blue)](https://galaxy.ansible.com/derJD/general)
 
 This repo contains the `derjd.general` collection. You'll find several plugins in this collection
 that aren't part of the [community.general collection](https://github.com/ansible-collections/community.general)
