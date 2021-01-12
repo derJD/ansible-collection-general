@@ -63,16 +63,16 @@ that are easily parsable by ansible loops.
 
 ### Inventory
 
-#### html
+#### http
 
 Reads json inventories from any HTTP(s) source. The hosted inventory json file must comply with the [new inventory script convention](https://docs.ansible.com/ansible/latest/dev_guide/developing_inventory.html#tuning-the-external-inventory-script), containing the top level `_meta` element with `hostvars` inside and all `groups` with `children` and `hosts`.
-This inventory plugin should be detected by ansible's `auto inventory plugin` as soon as an inventory is specified that ends on `html_inventory.yml` or `html_inventory.yaml`.
+This inventory plugin should be detected by ansible's `auto inventory plugin` as soon as an inventory is specified that ends on `http_inventory.yml` or `http_inventory.yaml`.
 
 **Example**:
 
 Inventory hosted on a plain webserver without authentication.
 
-`web.html_inventory.yml`:
+`web.http_inventory.yml`:
 
 ```yaml
 plugin: derjd.general.http
@@ -80,7 +80,7 @@ url: https://example.io/example_inventories/dev/inventory.json
 ```
 
 ```bash
-ansible-inventory -i web.html_inventory.yml --graph
+ansible-inventory -i web.http_inventory.yml --graph
 @all:
   |--@devstack:
   |  |--@api:
@@ -90,7 +90,7 @@ ansible-inventory -i web.html_inventory.yml --graph
 
 Inventory hosted on gitlab pages and authentication enabled.
 
-`gitlab_pages.html_inventory.yml`:
+`gitlab_pages.http_inventory.yml`:
 
 ```yaml
 plugin: derjd.general.http
@@ -102,7 +102,7 @@ auth_method: gitlab
 export HTTP_USERNAME=example_USERNAME
 export HTTP_PASSWORD=example_PASSWORD
 
-ansible-inventory -i gitlab_pages.html_inventory.yml --graph
+ansible-inventory -i gitlab_pages.http_inventory.yml --graph
 @all:
   |--@devstack:
   |  |--@api:
