@@ -118,7 +118,7 @@ class InventoryModule(BaseInventoryPlugin, Constructable):
             }
 
             session.post(login_url, data=auth)
-            r = session.post(self.url, data=auth)
+            r = session.get(self.url, data=auth)
 
         if self.is_valid_content(r):
             return r.json()
